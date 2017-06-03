@@ -1,5 +1,6 @@
 body{
     font-family: 'Raleway' sans-serif; 
+    font-size: 18px;
 }
 
 nav.top-menu{
@@ -16,6 +17,21 @@ nav.top-menu{
 
     .top-menu .btn-gray {margin-top: 15px;}
 
+.top-menu .navbar-nav > li:not(.logo) > a:hover::after{
+    content: "";
+	width: 0; 
+	height: 0; 
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-top: 12px solid #ffbe08;
+	font-size: 0;
+	line-height: 0;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    margin-left: -12px;
+
+}
 
 .btn-gray{
     color: white;
@@ -54,3 +70,46 @@ nav.top-menu{
     background: url("../img/header8.png") no-repeat center bottom, linear-gradient(to bottom, #36363c 0%,#4d4c5b 100%);
     
 }
+
+.btn-gray {
+
+}
+
+
+.read-more {
+    color: #333338;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.read-more::after {
+    content: "";
+    display: inline-block;
+    background: url("../img/link-hover.png") no-repeat 6px center;
+    width: 20px;
+    height: 12px;
+}
+
+    .read-more:hover {
+        color: #333338;
+        text-decoration: none;
+    }
+
+    .read-more:hover::after {
+        background-position: 8px center;
+    }
+
+    .block-header{
+        font-size: 50px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: url("../img/yellow-dot.png") no-repeat 0 center;
+    }
+
+    .block-header__vertical span{
+        transform: rotate(-90deg);
+        display: inline-block;
+        transform-origin: bottom;
+        position: relative;
+        top: 55px;
+    }
